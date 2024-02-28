@@ -1,0 +1,15 @@
+.site-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    background: none #fff;
+}
+
+.mainarea {
+    margin-left: 100px;
+    padding: 20px;
+    background: #f0f0f0;
+    min-height: 100vh;
+}
