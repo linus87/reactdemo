@@ -5,7 +5,7 @@ import Blogs from "./pages/Blogs";
 import Contact from "./pages/Contact";
 import Profile from "./pages/profile/Profile";
 import NoPage from "./pages/NoPage";
-import { incremented, decremented } from "./reducers/counterReducer";
+import { incremented, decremented, incrementByAmount } from "./reducers/counterReducer";
 import store from "./store";
 
 function App() {
@@ -31,5 +31,6 @@ store.dispatch(incremented())
 // {value: 2}
 store.dispatch(decremented())
 // {value: 1}
+store.dispatch(incrementByAmount(2))
 
 export default App;
