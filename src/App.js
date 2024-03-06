@@ -5,23 +5,10 @@ import Blogs from "./pages/Blogs";
 import Contact from "./pages/Contact";
 import Profile from "./pages/profile/Profile";
 import NoPage from "./pages/NoPage";
-import { configureStore } from '@reduxjs/toolkit'
-import rootReducer from "./reducers/rootReducer";
 import { incremented, decremented } from "./reducers/counterReducer";
+import store from "./store";
 
 function App() {
-  const store = configureStore({
-    reducer: rootReducer
-  })
-
-  // Still pass action objects to `dispatch`, but they're created for us
-  store.dispatch(incremented())
-  // {value: 1}
-  store.dispatch(incremented())
-  // {value: 2}
-  store.dispatch(decremented())
-  // {value: 1}
-
   return (
     <BrowserRouter>
       <Routes>
@@ -36,5 +23,13 @@ function App() {
     </BrowserRouter>
   );
 }
+
+// Still pass action objects to `dispatch`, but they're created for us
+store.dispatch(incremented())
+// {value: 1}
+store.dispatch(incremented())
+// {value: 2}
+store.dispatch(decremented())
+// {value: 1}
 
 export default App;
