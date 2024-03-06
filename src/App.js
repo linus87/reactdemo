@@ -4,6 +4,8 @@ import Home from "./pages/home/Home";
 import Blogs from "./pages/Blogs";
 import Contact from "./pages/Contact";
 import Profile from "./pages/profile/Profile";
+import PageWithUseState from "./pages/hooks/PageWithUseState";
+import PageWithUseCallback from "./pages/hooks/PageWithUseCallback";
 import NoPage from "./pages/NoPage";
 import { incremented, decremented, incrementByAmount } from "./reducers/counterReducer";
 import store from "./store";
@@ -17,6 +19,10 @@ function App() {
           <Route path="blogs" element={<Blogs />} />
           <Route path="contact" element={<Contact />} />
           <Route path="profile" element={<Profile />} />
+          <Route path="hooks">
+            <Route path="useState" index element={<PageWithUseState />} />
+            <Route path="useCallback" index element={<PageWithUseCallback />} />
+          </Route>
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

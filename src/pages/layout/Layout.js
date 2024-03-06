@@ -18,6 +18,12 @@ const Layout = () => {
           <li>
             <Link to="/profile">Profile</Link>
           </li>
+          <li>
+            <Link to="/hooks/useState">Hooks/useState</Link>
+          </li>
+          <li>
+            <Link to="/hooks/useCallback">Hooks/useCallback</Link>
+          </li>
         </ul>
       </nav>
 
