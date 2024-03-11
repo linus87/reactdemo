@@ -24,6 +24,9 @@ const Layout = () => {
           <li>
             <Link to="/hooks/useCallback">Hooks/useCallback</Link>
           </li>
+          <li>
+            <Link to="/redux">Redux Store</Link>
+          </li>
         </ul>
       </nav>
 

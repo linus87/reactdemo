@@ -4,11 +4,12 @@ import Home from "./pages/home/Home";
 import Blogs from "./pages/Blogs";
 import Contact from "./pages/Contact";
 import Profile from "./pages/profile/Profile";
+import ReduxStore from "./pages/store/ReduxStore";
 import PageWithUseState from "./pages/hooks/PageWithUseState";
 import PageWithUseCallback from "./pages/hooks/PageWithUseCallback";
 import NoPage from "./pages/NoPage";
 import { incremented, decremented, incrementByAmount } from "./reducers/counterReducer";
-import store from "./store";
+import store from "./app/store";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="useState" index element={<PageWithUseState />} />
             <Route path="useCallback" index element={<PageWithUseCallback />} />
           </Route>
+          <Route path="redux" element={<ReduxStore />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
